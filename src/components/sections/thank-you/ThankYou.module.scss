@@ -1,0 +1,33 @@
+.thanks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 80px;
+
+    @media (max-width: 768px) {
+        padding: 20px;
+    }
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    color: var(--color-deep-teal);
+    letter-spacing: 1px;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        font-size: 24px;
+    }
+}
+
+.text {
+    font-size: var(--font-body-2);
+    text-align: center;
+    color: var(--color-dark-green);
+    margin-bottom: 40px;
+}

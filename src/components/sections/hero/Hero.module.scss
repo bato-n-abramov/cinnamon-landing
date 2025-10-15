@@ -1,0 +1,152 @@
+.section {
+  position: relative;
+  background: #FFF0DE;
+  color: #fff;
+  padding: 230px 0 100px;
+  margin-top: -104px;
+  border-radius: 10px;
+  overflow: hidden;
+  isolation: isolate;
+  background-image: url("/hero.png");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+
+  @media (max-width: 768px) {
+    padding: 210px 0 135px;
+    border-radius: 16px;
+    background-image: url("/hero_mob.png");
+  }
+}
+
+.inner {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+    margin-bottom: 40px;
+    font-size: var(--heading-size-h1); 
+    line-height: 1;
+    white-space: pre-line;
+    color: var(--color-deep-cinnamon);
+    letter-spacing: -1px;
+    line-height: 0.92;
+
+    @media (max-width: 768px) {
+      margin-bottom: 25px;
+      line-height: 1.04;
+    }
+
+    em {
+      color: var(--color-deep-teal);
+    }
+}
+
+.text {
+    max-width: 620px;
+    margin: 0 auto 45px;
+    font-size: var(--font-body-1);
+    color: var(--color-dark-green);
+    font-weight: 400;
+}
+
+.cta {
+  margin: 0 auto;
+}
+
+.subtext {
+  margin-top: 10px;
+  color: var(--color-dark-green);
+  font-size: var(--font-body-2);
+}
+
+
+@property --sx { syntax:"<number>"; inherits:false; initial-value: 0; }
+@property --sy { syntax:"<number>"; inherits:false; initial-value: 0; }
+
+.blob1, .blob2 {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  mix-blend-mode: multiply; 
+  will-change: left, top, filter, opacity;
+}
+
+.blob1 {
+  --w: 488px;
+  --h: 475px;
+  width: var(--w);
+  height: var(--h);
+  background: #FC9538;
+  filter: blur(175px);
+  opacity: 0.95;
+
+  --sx: 0;
+  --sy: 0;
+
+
+  left: calc(var(--sx) * (100% - var(--w)));
+  top:  calc(var(--sy) * (100% - var(--h)));
+
+  animation:
+    blob1Path 24s ease-in-out infinite,
+    blobPulse 8s ease-in-out infinite;
+}
+
+.blob2 {
+  --w: 469px;
+  --h: 456px;
+  width: var(--w);
+  height: var(--h);
+  background: #FFCC7F;
+  filter: blur(200);
+  opacity: 0.9;
+
+  --sx: 0.06;
+  --sy: 0.04;
+
+  left: calc(var(--sx) * (100% - var(--w)));
+  top:  calc(var(--sy) * (100% - var(--h)));
+
+  animation:
+    blob2Path 28s ease-in-out infinite,
+    blobPulse 9.5s ease-in-out infinite;
+}
+
+@keyframes blob1Path {
+  0%   { --sx: 0.00; --sy: 0.00; }
+  20%  { --sx: 0.55; --sy: 0.00; }
+  45%  { --sx: 1.00; --sy: 0.60; } 
+  70%  { --sx: 0.40; --sy: 1.00; }
+  100% { --sx: 0.00; --sy: 0.00; }
+}
+
+@keyframes blob2Path {
+  0%   { --sx: 0.06; --sy: 0.04; }
+  25%  { --sx: 0.20; --sy: 0.90; }
+  50%  { --sx: 0.95; --sy: 0.70; } 
+  75%  { --sx: 0.80; --sy: 0.10; } 
+  100% { --sx: 0.06; --sy: 0.04; } 
+}
+
+
+@keyframes blobPulse {
+  0%,100% { opacity: 0.9; filter: blur(175px) saturate(1.0); transform: scale(1); }
+  50%     { opacity: 1.0; filter: blur(160px) saturate(1.08); transform: scale(1.03); }
+}
+
+
+.blob2 { 
+  animation-name: blob2Path, blobPulse2; 
+}
+@keyframes blobPulse2 {
+  0%,100% { opacity: 0.9; filter: blur(201.19px) saturate(1.0); transform: scale(1); }
+  50%     { opacity: 1.0; filter: blur(185px)    saturate(1.08); transform: scale(1.03); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob1, .blob2 { animation: none; }
+}

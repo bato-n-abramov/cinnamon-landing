@@ -1,0 +1,234 @@
+.footer {
+    position: relative;
+    background: #FFF0DE;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.footerWrapper {
+    padding: 80px 35px 15px;
+
+    @media (max-width: 768px) {
+        padding: 50px 15px 15px;
+    }
+}
+
+.footerCol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+.footerLogo {
+    display: block;
+    width: 210px;
+    margin-bottom: 16px;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.footerSubtitle {
+    max-width: 255px;
+    font-size: var(--font-body-1);
+    color: var(--color-dark-green);
+    font-weight: 400;
+    margin-bottom: 32px;
+}
+
+.footerMenus {
+    gap: 80px;
+    margin-bottom: 65px;
+    margin-right: 25px;
+    display: flex;
+
+    @media (max-width: 768px) {
+        margin-right: 0;
+    }
+
+    @media (max-width: 575px) {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+.footerMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--color-dark-green);
+    font-size: var(--font-body-2);
+
+    @media (max-width: 768px) {
+        gap: 14px;
+    }
+}
+
+.footerMenuTitle {
+    text-transform: uppercase;
+    color: var(--color-deep-teal);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+
+    @media (max-width: 575px) {
+        font-size: 19px;
+    }
+}
+
+.footerLink {
+    transition: var(--transition);
+    
+    &:hover {
+        text-decoration: underline;
+        color: var(--color-deep-teal);
+    }
+}
+
+
+.footerLogos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 16px;
+
+    @media (max-width:768px) {
+        width: 100%;
+        justify-content: center;
+        gap: 24px;
+    }
+}
+
+.footerText {
+    max-width: 315px;
+    color: var(--color-dark-green);
+    font-size: var(--font-body-1);
+
+    @media (max-width: 768px) {
+        font-size: var(--font-body-2);
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+.footerImage {
+    width: 100%;
+
+    img {
+        width: 100%;
+        transform: translateY(10px);
+        height: auto;
+    }
+}
+
+
+
+@property --sx { syntax:"<number>"; inherits:false; initial-value: 0; }
+@property --sy { syntax:"<number>"; inherits:false; initial-value: 0; }
+
+.blob1, .blob2 {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  mix-blend-mode: multiply; 
+  will-change: left, top, filter, opacity;
+}
+
+.blob1 {
+  --w: 488px;
+  --h: 475px;
+  width: var(--w);
+  height: var(--h);
+  background: #fb8c2b;
+  filter: blur(175px);
+  opacity: 0.95;
+
+  --sx: 0;
+  --sy: 0;
+
+
+  left: calc(var(--sx) * (100% - var(--w)));
+  top:  calc(var(--sy) * (100% - var(--h)));
+
+  animation:
+    blob1Path 24s ease-in-out infinite,
+    blobPulse 8s ease-in-out infinite;
+}
+
+.blob2 {
+  --w: 469px;
+  --h: 456px;
+  width: var(--w);
+  height: var(--h);
+  background: #f6be69;
+  filter: blur(200);
+  opacity: 0.9;
+
+  --sx: 0.06;
+  --sy: 0.04;
+
+  left: calc(var(--sx) * (100% - var(--w)));
+  top:  calc(var(--sy) * (100% - var(--h)));
+
+  animation:
+    blob2Path 28s ease-in-out infinite,
+    blobPulse 9.5s ease-in-out infinite;
+}
+
+@keyframes blob1Path {
+  0%   { --sx: 0.00; --sy: 0.00; }
+  20%  { --sx: 0.55; --sy: 0.00; }
+  45%  { --sx: 1.00; --sy: 0.60; } 
+  70%  { --sx: 0.40; --sy: 1.00; }
+  100% { --sx: 0.00; --sy: 0.00; }
+}
+
+@keyframes blob2Path {
+  0%   { --sx: 0.06; --sy: 0.04; }
+  25%  { --sx: 0.20; --sy: 0.90; }
+  50%  { --sx: 0.95; --sy: 0.70; } 
+  75%  { --sx: 0.80; --sy: 0.10; } 
+  100% { --sx: 0.06; --sy: 0.04; } 
+}
+
+
+@keyframes blobPulse {
+  0%,100% { opacity: 0.9; filter: blur(175px) saturate(1.0); transform: scale(1); }
+  50%     { opacity: 1.0; filter: blur(160px) saturate(1.08); transform: scale(1.03); }
+}
+
+
+.blob2 { 
+  animation-name: blob2Path, blobPulse2; 
+}
+@keyframes blobPulse2 {
+  0%,100% { opacity: 0.9; filter: blur(201.19px) saturate(1.0); transform: scale(1); }
+  50%     { opacity: 1.0; filter: blur(185px)    saturate(1.08); transform: scale(1.03); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob1, .blob2 { animation: none; }
+}

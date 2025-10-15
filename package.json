@@ -1,0 +1,38 @@
+{
+  "name": "cinnamon-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@radix-ui/react-select": "^2.2.6",
+    "@react-email/render": "^1.2.3",
+    "@sendgrid/mail": "^8.1.6",
+    "@strapi/blocks-react-renderer": "^1.0.2",
+    "formik": "^2.4.6",
+    "framer-motion": "^12.23.15",
+    "libphonenumber-js": "^1.12.24",
+    "lottie-react": "^2.4.1",
+    "next": "15.5.2",
+    "plyr": "^3.8.3",
+    "plyr-react": "^5.3.0",
+    "qs": "^6.14.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-google-recaptcha": "^3.1.0",
+    "react-hook-form": "^7.63.0",
+    "react-phone-number-input": "^3.4.12",
+    "resend": "^6.1.2",
+    "yup": "^1.7.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.2",
+    "sass": "^1.92.1"
+  }
+}
