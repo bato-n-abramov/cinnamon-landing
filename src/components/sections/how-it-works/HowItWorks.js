@@ -27,7 +27,7 @@ export default function HowItWorks({ tag }) {
                 },
                 "Link": {
                     "id": 5,
-                    "Link_url": "/prior-authorization",
+                    "Link_url": "/sign-up",
                     "Link_title": "Learn More",
                     "Link_target": "_self"
                 }
@@ -42,7 +42,7 @@ export default function HowItWorks({ tag }) {
                 },
                 "Link": {
                     "id": 5,
-                    "Link_url": "/financial-assistance",
+                    "Link_url": "/sign-up",
                     "Link_title": "Learn More",
                     "Link_target": "_self"
                 }
