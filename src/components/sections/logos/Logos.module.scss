@@ -1,0 +1,60 @@
+.logos {
+  padding: 40px 0;
+  margin: 0 -15px;
+  overflow-x: clip;
+
+  @media (max-width: 768px) {
+    padding: 20px 0;
+  }
+}
+
+.logosTitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-dark-green);
+    text-align: center;
+}
+
+.ticker {
+  position: relative;
+  overflow: hidden;
+}
+
+.tickerInner {
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 60s linear infinite;
+  will-change: transform;
+}
+
+.item {
+  flex: 0 0 auto;
+  width: 140px;
+  height: 40px;
+  margin-right: 70px;
+}
+
+.item:last-child { margin-right: 0; }
+
+@media (max-width: 768px) {
+  .item { margin-right: 40px; }
+}
+
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } 
+}
+
+.logoImg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}

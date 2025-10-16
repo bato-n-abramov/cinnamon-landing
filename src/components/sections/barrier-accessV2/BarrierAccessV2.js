@@ -30,10 +30,16 @@ export default function BarrierAccessV2() {
                                 </div>
                                 <div className={styles.itemText}><strong>The work piles up fast.</strong></div>
                             </div>
+                            <div className={styles.mobImage}>
+                                <Image src={"/barrierAccess1.png"} width={200} height={200} alt={"Image"} />
+                            </div>
                             <div className={styles.arrow}>
                                 <Image src={"/arrow-orange.png"} width={100} height={100} alt={"Arrow"} />
                             </div>
                             <div className={`${styles.item} ${styles.border}`}>
+                                <div className={styles.arrowMob}>
+                                    <Image src={"/arrow-orange-2.png"} width={100} height={100} alt={"Arrow"} />
+                                </div>
                                 <div className={styles.itemImage}>
                                     <Image src={"/barrierAccess2.png"} width={200} height={200} alt="Image" />
                                 </div>

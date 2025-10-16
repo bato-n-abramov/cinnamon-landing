@@ -15,7 +15,7 @@ export default function Footer() {
 
                 <div className={styles.footerTop}>
                     <div className={styles.footerCol}>
-                        <Link href="https://cinnamon.health/" target="_blank" className={styles.footerLogo}>
+                        <Link href="/" className={styles.footerLogo}>
                             <Image
                                 src="/new_logo.png"
                                 alt={"Logo"}
@@ -25,13 +25,13 @@ export default function Footer() {
                             />
                         </Link>
                         <div className={styles.footerSubtitle}>Empowering healthcare through intelligent automation</div>
-                        <Link className={`${styles.footerCta} button-primary`} href="https://cinnamon.health/contact" target="_blank">
-                            Contact Us
+                        <Link className={`${styles.footerCta} button-primary`} href="/sign-up" target="_blank">
+                            Sign up
                         </Link>
                     </div>
 
                     <div className={styles.footerCol}>
-                        <div className={styles.footerMenus}>
+                        {/* <div className={styles.footerMenus}>
                             <ul className={styles.footerMenu}>
                                 <li className={styles.footerMenuTitle}>Company</li>
                                 <li className={styles.footerLink}>
@@ -68,7 +68,7 @@ export default function Footer() {
                                     </Link>
                                 </li>
                             </ul>
-                        </div>
+                        </div> */}
                         <div className={styles.footerLogos}>
                             <img
                                 src={"/footer1.png"}

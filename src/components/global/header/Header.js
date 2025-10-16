@@ -20,7 +20,6 @@ export default function Header() {
         { href: "/#efficiency-scale", label: "What you gain" },
         { href: "/#compliance", label: "Why it’s safe" },
         { href: "/#request-demo", label: "How to start" },
-        { href: "/sign-up", label: "Sign Up" },
     ];
 
     const toggleMenu = () => setIsOpen(!isOpen);
@@ -117,8 +116,8 @@ export default function Header() {
                     {links.map(renderNavLink)}
                 </nav>
 
-                <Link className={`${styles.headerCta} button-primary`} href={"https://cinnamon.health/contact"} target="_blank">
-                    Contact Us
+                <Link className={`${styles.headerCta} button-primary`} href={"/sign-up"}>
+                    Sign Up
                 </Link>
                 <div className={`${styles.headerMenuToggler} ${isOpen ? styles.togglerOpen : ''}`} onClick={toggleMenu}>
                     <div className={styles.menuToggler}>

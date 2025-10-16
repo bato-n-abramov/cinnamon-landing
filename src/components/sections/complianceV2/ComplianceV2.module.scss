@@ -1,11 +1,20 @@
 .section {
     padding: 125px 0;
+    margin-bottom: 15px;
+
+    @media (max-width: 768px) {
+        padding: 70px 0;
+    }
 }
 
 .inner {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 768px) {
+        padding: 0 10px;
+    }
 }
 
 .tag {
@@ -27,6 +36,10 @@
     color: var(--color-deep-teal);
     text-transform: capitalize;
 
+    @media (max-width: 768px) {
+       margin-bottom: 40px;
+    }
+
     strong {
         font-weight: 600;
         color: var(--color-amber-glow);
@@ -46,6 +59,12 @@
     background: rgba(255, 255, 255, 0.75);
     box-shadow: 0 4px 25px 0 rgba(82, 82, 82, 0.08);
     backdrop-filter: blur(10px);
+
+    svg {
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
 }
 
 .blockTitle {
@@ -61,6 +80,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 16px; 
     margin-bottom: 40px;  
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .item {
@@ -96,22 +119,34 @@
 }
 
 .orange {
-    padding: 24px;
+    padding: 24px 50px;
     max-width: 850px;
     border-radius: 24px;
     background: var(--color-white);
     box-shadow: 0 4px 25px 0 rgba(82, 82, 82, 0.08);
     backdrop-filter: blur(60px);
     color: var(--color-orange);
+
+    @media (max-width: 768px) {
+        padding: 24px;
+    }
 }
 
 .logos {
     display: flex;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 110px;
+
+    @media (max-width: 768px) {
+        margin-top: 40px;
+    }
 
     img {
         width: auto;
         height: auto;
+
+        @media (max-width: 768px) {
+            height: 55px;
+        }
     }
 }

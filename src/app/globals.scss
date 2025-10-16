@@ -186,7 +186,13 @@ main {
   align-items: center;
   gap: 22px;
   flex-direction: column;
+
+  .center {
+    align-self: center;
+  }
 }
+
+
 
 .row {
   display: grid;

@@ -6,7 +6,7 @@ import { LineOne, LineTwo, LineThree } from "@/components/svg/Lines";
 import { motion } from "framer-motion";
 import styles from "./HowItWorks.module.scss";
 
-export default function HowItWorks() {
+export default function HowItWorks({ tag }) {
     const data = {
         Title: "Automation <strong>Where It Matters Most</strong> ",
         main_content: {
@@ -95,6 +95,7 @@ export default function HowItWorks() {
             id="how-it-works"
         >
             <div className={`${styles.howItWorksWrapper} container`}>
+                {tag && <div className={styles.tag}>How It Works</div>}
                 <motion.div
                     className={styles.howItWorksTitle}
                     variants={slideUp(0)}

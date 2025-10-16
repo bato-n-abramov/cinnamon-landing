@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import ThankYou from "../thank-you/ThankYou";
 import * as Yup from "yup";
@@ -15,7 +15,7 @@ const Schema = Yup.object({
     org: Yup.string().required("Organisation is required"),
 });
 
-export default function SignUpForm() {
+export default function SignUpForm({ onSuccess, cls }) {
     const [submitting, setSubmitting] = useState(false);
     const [status, setStatus] = useState(null);
 
@@ -32,6 +32,7 @@ export default function SignUpForm() {
             if (!res.ok) throw new Error(data?.error || "Request failed");
             setStatus("ok");
             resetForm();
+            onSuccess?.();
         } catch (e) {
             console.error(e);
             setStatus("error");
@@ -170,7 +171,7 @@ export default function SignUpForm() {
                         tabIndex={0}
                         onClick={submitForm}
                         onKeyDown={(e) => { if (e.key === "Enter") submitForm(); }}
-                        className={`${styles.buttonSubmit} button-icon`}
+                        className={`${styles.buttonSubmit} ${cls} button-icon`}
                     >
                         <span className="button-icon-text">{submitting ? "Sending..." : "Sign Up"}</span>
                         <span className="button-icon-arrow">
