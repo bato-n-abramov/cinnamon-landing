@@ -87,9 +87,9 @@ export default function RequestDemoV2() {
                             Be part of the network of clinics and health systems nationwide transforming
                             how patients start and stay on therapy with Cinnamon today.
                         </motion.div>
-                        <div className={styles.image}>
+                        <motion.div variants={fadeUp} custom={2} className={styles.image}>
                             <Image src={"/request-demoV2.png"} width={200} height={200} alt="Image" />
-                        </div>
+                        </motion.div>
                     </div>
 
                     <Formik
