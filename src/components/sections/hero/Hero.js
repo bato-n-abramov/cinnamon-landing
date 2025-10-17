@@ -40,7 +40,7 @@ export default function Hero() {
           custom={2}
         >
           <a
-            href={"#id"}
+            href={"/#request-demo"}
             className={`${styles.cta} button-icon`}
           >
             <span className='button-icon-text'>Request a Demo</span>

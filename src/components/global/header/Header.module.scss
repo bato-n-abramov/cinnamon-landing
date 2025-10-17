@@ -49,9 +49,10 @@
 .headerNav {
     display: flex;
     align-items: center;
-    gap: 36px;
+    gap: 24px;
     font-weight: 400;
     color: var(--color-dark-green);
+    flex: 1;
 }
 
 .navLink {
@@ -59,9 +60,23 @@
     font-size: var(--font-body-2);
     text-transform: capitalize;
 
-    &.active {
-        color: var(--color-deep-teal);
+    &:first-child {
+        margin-left: auto;
+
+        @media (max-width: 1025px) {
+            margin: 0;
+        }
     }
+
+    &:last-child {
+        margin-left: 75px;
+        margin-right: 20px;
+
+        @media (max-width: 1025px) {
+            margin: 0;
+        }
+    }
+
 
     &:hover {
         color: var(--color-deep-teal);

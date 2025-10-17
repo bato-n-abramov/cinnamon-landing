@@ -16,7 +16,7 @@ export default function ComplianceV2() {
     };
 
     return (
-        <section className={styles.section}>
+        <section id="compliance" className={styles.section}>
             <div className={`${styles.inner} container`}>
                 <div className={styles.tag}>Why It’s Safe</div>
                 <h2 className={styles.title}><strong>Built for Healthcare.</strong> Trusted by Enterprise</h2>

@@ -16,7 +16,7 @@ export default function EfficiencyScaleV2() {
     };
 
     return (
-        <section className={styles.section}>
+        <section id="efficiency-scale" className={styles.section}>
             <div className={`${styles.inner} container`}>
                 <div className={styles.tag}>What you gain</div>
                 <h2 className={styles.title}>From Clinic to System,<br /> Efficiency Scales with Cinnamon</h2>

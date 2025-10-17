@@ -25,8 +25,8 @@ export default function Footer() {
                             />
                         </Link>
                         <div className={styles.footerSubtitle}>Empowering healthcare through intelligent automation</div>
-                        <Link className={`${styles.footerCta} button-primary`} href="/sign-up" target="_blank">
-                            Sign up
+                        <Link className={`${styles.footerCta} button-primary`} href="https://cinnamon.health/contact" target="_blank">
+                            Contact Us
                         </Link>
                     </div>
 

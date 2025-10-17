@@ -16,7 +16,7 @@ export default function BarrierAccessV2() {
     };
 
     return (
-        <section className={styles.section}>
+        <section id="barrier-access" className={styles.section}>
             <div className={`${styles.inner} container`}>
                 <div className={styles.tag}>Why you need it</div>
                 <h2 className={styles.title}>The Biggest Barrier <br /> To Access Isn’t Cost.<strong> It’s Process</strong></h2>
@@ -50,9 +50,9 @@ export default function BarrierAccessV2() {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.image}>
+                    {/* <div className={styles.image}>
                         <Image src={"/BarrierAccessV2Illustration.png"} width={700} height={700} alt={"image"} />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

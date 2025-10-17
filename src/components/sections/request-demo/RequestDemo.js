@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import CustomSelect from "@/components/ui/custom-select/CustomSelect";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "./RequestDemo.module.scss";
 
 const specialties = [
@@ -39,10 +39,17 @@ const Schema = Yup.object({
 
 export default function RequestDemo() {
     const [submitting, setSubmitting] = useState(false);
+    const [status, setStatus] = useState(null);
 
+    useEffect(() => {
+        if (!status) return;
+        const t = setTimeout(() => setStatus(null), 5000);
+        return () => clearTimeout(t);
+    }, [status]);
 
     const submit = async (values, { resetForm }) => {
         try {
+            setStatus(null);
             setSubmitting(true);
             const res = await fetch("/api/forms", {
                 method: "POST",
@@ -53,10 +60,11 @@ export default function RequestDemo() {
                 }),
             });
             if (!res.ok) throw new Error("Request failed", res);
+            setStatus("ok");
             resetForm();
         } catch (e) {
             console.error(e);
-            alert("Something went wrong. Please try again.");
+            setStatus("error");
         } finally {
             setSubmitting(false);
         }
@@ -240,9 +248,27 @@ export default function RequestDemo() {
                                     </span>
                                 </div>
                                 <div className={styles.formText}>See how Cinnamon transforms patient access from start to finish.</div>
+                                <AnimatePresence>
+                                    {status && (
+                                        <motion.div
+                                            key={status}
+                                            initial={{ opacity: 0, y: -8 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: -8 }}
+                                            role={status === "error" ? "alert" : "status"}
+                                            aria-live="polite"
+                                            className={`${styles.message} ${status === "ok" ? styles.success : styles.error}`}
+                                        >
+                                            {status === "ok"
+                                                ? "Thank you for your interest in Cinnamon!"
+                                                : "Something went wrong. Please try again."}
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </Form>
                         </motion.div>
                     )}
+
                 </Formik>
             </div>
         </motion.section>
