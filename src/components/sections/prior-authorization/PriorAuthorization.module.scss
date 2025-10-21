@@ -1,0 +1,134 @@
+.section {
+    padding: 125px 0;
+
+    @media (max-width: 768px) {
+        padding: 70px 0;
+    }
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        padding: 0 10px;
+    }
+}
+
+.title {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-deep-teal);
+
+
+    strong {
+        font-weight: 600;
+        color: var(--color-amber-glow);
+    }
+}
+
+.text {
+    max-width: 750px;
+    text-align: center;
+    color: var(--color-dark-green);
+
+    strong {
+        color: var(--color-deep-teal);
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    gap: 30%;
+
+    @media (max-width: 768px) {
+        gap: 20px;
+        flex-direction: column;
+    }
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    z-index: -1;
+
+    @media (max-width: 768px) {
+       display: none;
+    }
+
+    &.mob {
+        position: static;
+        height: auto;
+        display: block;
+        width: 100vw;
+        margin: 0 -20px;
+        
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 420px;
+
+    @media (max-width: 768px) {
+       max-width: 100%;
+       gap: 40px;
+    }
+
+    &:last-child {
+        align-self: flex-end;
+    }
+}
+
+.item {
+    padding: 24px 40px;
+    border-radius: 24px;
+    border: 1px solid var(--color-white);
+    background: #FFF;
+    box-shadow: 0 4px 25px 0 rgba(82, 82, 82, 0.08);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    width: 100%;
+    color: var(--color-dark-green);
+
+    &.bold {
+        font-weight: 600;
+        color: var(--color-deep-teal);
+    }
+}
+
+.arrow {
+    width: 72px;
+    height: 72px;
+    margin: -60px 0;
+    z-index: 1;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

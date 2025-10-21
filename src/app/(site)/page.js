@@ -1,8 +1,12 @@
 import Hero from "@/components/sections/hero/Hero";
 import BarrierAccess from "@/components/sections/barrier-access/BarrierAccess";
+import BarrierAccessV3 from "@/components/sections/barrier-accessV3/BarrierAccessV3";
 import HowItWorks from "@/components/sections/how-it-works/HowItWorks";
+import PriorAuthorization from "@/components/sections/prior-authorization/PriorAuthorization";
 import EfficiencyScale from "@/components/sections/efficiency-scale/EfficiencyScale";
 import Compliance from "@/components/sections/compliance/Compliance";
+import FinancialAssistance from "@/components/sections/financial-assistance/FinancialAssistance";
+import SustainedAdherence from "@/components/sections/sustained-adherence/SustainedAdherence";
 import RequestDemo from "@/components/sections/request-demo/RequestDemo";
 import { getBaseUrl } from "@/lib/baseUrl";
 import { jsonLd } from "@/lib/jsonLd";
@@ -71,10 +75,12 @@ export default function Home() {
     return (
         <main>
             <Hero />
-            <BarrierAccess />
-            <HowItWorks />
-            <EfficiencyScale />
-            <Compliance />
+            <BarrierAccessV3 />
+            <PriorAuthorization />
+            {/* <HowItWorks /> */}
+            {/* <EfficiencyScale /> */}
+            <FinancialAssistance />
+            <SustainedAdherence />
             <RequestDemo />
 
             {/* JSON-LD */}

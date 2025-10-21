@@ -51,10 +51,21 @@
     font-size: var(--font-body-1);
     color: var(--color-dark-green);
     font-weight: 400;
+
+    strong {
+      color: var(--color-deep-teal);
+      font-weight: 600;
+    }
 }
 
 .cta {
   margin: 0 auto;
+}
+
+.suptext {
+  margin-bottom: 20px;
+  color: var(--color-dark-green);
+  font-size: var(--font-body-2);
 }
 
 .subtext {

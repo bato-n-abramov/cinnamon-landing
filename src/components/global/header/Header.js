@@ -15,11 +15,11 @@ export default function Header() {
     const pathname = usePathname();
 
     const links = [
-        { href: "/#barrier-access", label: "Why you need it" },
-        { href: "/#how-it-works", label: "How it works" },
-        { href: "/#efficiency-scale", label: "What you gain" },
-        { href: "/#compliance", label: "Why it’s safe" },
-        { href: "/#request-demo", label: "How to start" },
+        // { href: "/#barrier-access", label: "Why you need it" },
+        // { href: "/#how-it-works", label: "How it works" },
+        // { href: "/#efficiency-scale", label: "What you gain" },
+        // { href: "/#compliance", label: "Why it’s safe" },
+        // { href: "/#request-demo", label: "How to start" },
         { href: "/sign-up", label: "Sign up" },
     ];
 
