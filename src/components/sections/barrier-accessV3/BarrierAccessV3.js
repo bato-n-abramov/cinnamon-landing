@@ -89,8 +89,8 @@ export default function BarrierAccessV3() {
                             </div>
                         </motion.div>
                     </div>
-                    <div className={styles.subText}>Turn post-Rx complexity into coordinated care
-                        that delivers measurable, lasting impact.</div>
+                    <motion.div variants={fadeUp} custom={11} className={styles.subText}>Turn post-Rx complexity into coordinated care
+                        that delivers measurable, lasting impact.</motion.div>
                 </div>
             </div>
         </motion.section>

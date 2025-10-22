@@ -45,14 +45,8 @@ export default function FinancialAssistance() {
                     </motion.div>
                 </motion.div>
             </div>
-            {/* <motion.div variants={fadeUp} custom={5} className={styles.image}>
-                <Image src={"/fin-a.svg"} width={1440} height={700} alt="image" />
-            </motion.div>
-            <motion.div variants={fadeUp} custom={5} className={`${styles.image} ${styles.mob}`}>
-                <Image src={"/fin-a-mob.svg"} width={1440} height={700} alt="image" />
-            </motion.div> */}
             <motion.div variants={fadeUp} className={styles.image} onViewportEnter={() => {
-                desktopRef.current?.setSpeed(1.5);
+                desktopRef.current?.setSpeed(1);
                 desktopRef.current?.goToAndPlay(0);
             }}
                 viewport={{
@@ -66,7 +60,7 @@ export default function FinancialAssistance() {
                     autoplay={false}
                     loop={false}
 
-                    className={`${styles.lottie} ${styles.desktop}`}
+                    className={`${styles.lottie}`}
                 />
             </motion.div>
             <div className={`${styles.inner} container`}>

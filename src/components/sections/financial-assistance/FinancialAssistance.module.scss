@@ -88,9 +88,16 @@
 
 .image {
     width: 100%;
-    height: 100%;
-    // margin-top: 125px;
+    height: 750px;
     margin-bottom: 100px;
+
+    @media (max-width: 768px) {
+        height: auto;
+    }
+
+    .lottie {
+        height: 100%;
+    }
 }
 
 .subtext {
