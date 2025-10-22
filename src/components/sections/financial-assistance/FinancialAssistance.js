@@ -1,8 +1,11 @@
 "use client";
 
+import { useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Lottie from "lottie-react";
 import styles from "./FinancialAssistance.module.scss";
+import desktopAnim from "@/lottie/desktop3.json";
 
 export default function FinancialAssistance() {
 
@@ -14,6 +17,9 @@ export default function FinancialAssistance() {
             transition: { duration: 0.6, delay: i * 0.2, ease: "linear" },
         }),
     };
+
+    const desktopRef = useRef(null);
+
 
     return (
         <motion.section id="financial-assistance" initial="hidden"
@@ -39,11 +45,29 @@ export default function FinancialAssistance() {
                     </motion.div>
                 </motion.div>
             </div>
-            <motion.div variants={fadeUp} custom={5} className={styles.image}>
+            {/* <motion.div variants={fadeUp} custom={5} className={styles.image}>
                 <Image src={"/fin-a.svg"} width={1440} height={700} alt="image" />
             </motion.div>
             <motion.div variants={fadeUp} custom={5} className={`${styles.image} ${styles.mob}`}>
                 <Image src={"/fin-a-mob.svg"} width={1440} height={700} alt="image" />
+            </motion.div> */}
+            <motion.div variants={fadeUp} className={styles.image} onViewportEnter={() => {
+                desktopRef.current?.setSpeed(1.5);
+                desktopRef.current?.goToAndPlay(0);
+            }}
+                viewport={{
+                    once: true,
+                    amount: 0.3
+                }}
+            >
+                <Lottie
+                    lottieRef={desktopRef}
+                    animationData={desktopAnim}
+                    autoplay={false}
+                    loop={false}
+
+                    className={`${styles.lottie} ${styles.desktop}`}
+                />
             </motion.div>
             <div className={`${styles.inner} container`}>
                 <motion.div

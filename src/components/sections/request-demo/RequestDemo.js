@@ -162,9 +162,9 @@ export default function RequestDemo() {
                                             international
                                             value={values.phone}
                                             onChange={(v) => setFieldValue("phone", v || "")}
-                                            className={`${values.phone ? "filled" : ""}`}
+                                            className={`${values.phone ? "filled" : ""} phone-input`}
                                         />
-                                        <ErrorMessage name="phone" component="span" className={styles.err} />
+                                        <ErrorMessage name="phone" component="span" className={`${styles.err} err`} />
                                     </div>
                                 </div>
 

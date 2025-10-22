@@ -72,18 +72,18 @@ export default function BarrierAccessV3() {
                     <motion.h3 variants={fadeUp} custom={7} className={`${styles.title} ${styles.bold}`}>From independent clinics to multi-hospital networks, <strong>efficiency scales with Cinnamon</strong></motion.h3>
                     <div className={styles.listIcons}>
                         <motion.div variants={fadeUp} custom={8} className={styles.itemIcon}>
-                            <Image src={"/check.png"} className={styles.icon} width={200} height={200} alt={"check"} />
+                            <Image src={"/check2.png"} className={styles.icon} width={200} height={200} alt={"check"} />
                             <div className={styles.itemText}>Health systems unlock new capacity and revenue without adding headcount.
                             </div>
                         </motion.div>
                         <motion.div variants={fadeUp} custom={9} className={styles.itemIcon}>
-                            <Image src={"/check.png"} className={styles.icon} width={200} height={200} alt={"check"} />
+                            <Image src={"/check2.png"} className={styles.icon} width={200} height={200} alt={"check"} />
                             <div className={styles.itemText}>Clinics process more prescriptions
                                 with the same team.
                             </div>
                         </motion.div>
                         <motion.div variants={fadeUp} custom={10} className={styles.itemIcon}>
-                            <Image src={"/check.png"} className={styles.icon} width={200} height={200} alt={"check"} />
+                            <Image src={"/check2.png"} className={styles.icon} width={200} height={200} alt={"check"} />
                             <div className={styles.itemText}>Patients start therapy sooner
                                 and stay on it longer.
                             </div>

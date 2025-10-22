@@ -302,6 +302,13 @@ textarea.filled {
   }
 }
 
+.PhoneInput:has( + .err) {
+  input,
+  .PhoneInputCountry {
+    border-color: var(--color-danger);
+  }
+}
+
 
 .wrapper {
   position: relative;

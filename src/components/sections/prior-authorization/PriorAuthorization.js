@@ -1,7 +1,11 @@
 "use client";
 
+import { useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Lottie from "lottie-react";
+import desktopAnim from "@/lottie/desktop2.json";
+
 import styles from "./PriorAuthorization.module.scss";
 
 export default function PriorAuthorization() {
@@ -14,6 +18,7 @@ export default function PriorAuthorization() {
         }),
     };
 
+    const desktopRef = useRef(null);
 
     return (
         <motion.section
@@ -32,24 +37,36 @@ export default function PriorAuthorization() {
                             Our predictive engine keeps pace with evolving payer rules, and smart resubmission workflows <strong>accelerate appeals while reducing denials.</strong>
                         </div>
                         <div className={styles.arrow}>
-                            <Image src={"/arrow-blue.png"} width={400} height={400} alt={"Arrow"} />
+                            <Image src={"/arrow-blue2.png"} width={400} height={400} alt={"Arrow"} />
                         </div>
                         <div className={styles.item}>
                             Each submission is automatically validated against plan-specific criteria and pre-populated with the right clinical and insurance details, <strong>turning hours of manual entry into minutes.</strong>
                         </div>
                     </motion.div>
-                    <motion.div variants={fadeUp} custom={3} className={styles.image}>
-                        <Image src={"/prior.png"} width={1400} height={700} alt={"image"} unoptimized />
-                    </motion.div>
-                    <motion.div variants={fadeUp} custom={3} className={`${styles.image} ${styles.mob}`}>
-                        <Image src={"/prior-mob.png"} width={1400} height={700} alt={"image"} unoptimized />
+                    <motion.div variants={fadeUp} className={styles.image} onViewportEnter={() => {
+                        desktopRef.current?.setSpeed(1.5);
+                        desktopRef.current?.goToAndPlay(0);
+                    }}
+                        viewport={{
+                            once: true,
+                            amount: 0.3
+                        }}
+                    >
+                        <Lottie
+                            lottieRef={desktopRef}
+                            animationData={desktopAnim}
+                            autoplay={false}
+                            loop={false}
+
+                            className={`${styles.lottie} ${styles.desktop}`}
+                        />
                     </motion.div>
                     <motion.div variants={fadeUp} custom={2} className={styles.list}>
                         <div className={`${styles.item} ${styles.bold}`}>
                             Prior authorization moves in sync with care delivery.
                         </div>
                         <div className={styles.arrow}>
-                            <Image src={"/arrow-blue.png"} width={400} height={400} alt={"Arrow"} />
+                            <Image src={"/arrow-blue2.png"} width={400} height={400} alt={"Arrow"} />
                         </div>
                         <div className={styles.item}>
                             <strong>Approvals come faster</strong>, accuracy <strong>stays high</strong>, and staff <strong>stay focused on your patients</strong> instead of paperwork.
