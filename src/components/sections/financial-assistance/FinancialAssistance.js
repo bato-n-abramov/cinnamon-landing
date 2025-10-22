@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import styles from "./FinancialAssistance.module.scss";
