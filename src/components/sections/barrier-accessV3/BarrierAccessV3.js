@@ -29,7 +29,7 @@ export default function BarrierAccessV3() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }} className={styles.section}>
             <div className={`${styles.inner} container`}>
-                <motion.h2 variants={fadeUp} custom={0} className={styles.title}>The Biggest Barrie To Access Isn’t Cost.<strong> It’s Process</strong></motion.h2>
+                <motion.h2 variants={fadeUp} custom={0} className={styles.title}>The Biggest Barrier To Access Isn’t Cost.<strong> It’s Process</strong></motion.h2>
                 <motion.div variants={fadeUp} custom={1} className={styles.subtitle}>Behind every specialty prescription sits a maze of manual steps: faxing forms, chasing signatures, checking benefits. <strong>Nearly 30% of prescriptions never get filled because of a manual workflow breakdown.</strong></motion.div>
             </div>
             <div className={styles.content}>
@@ -40,8 +40,8 @@ export default function BarrierAccessV3() {
                     </motion.div>
                     <motion.div variants={fadeUp} custom={3} className={styles.text}>By integrating directly into your EHR, we cut manual steps, shorten time to therapy, and improve adherence across every specialty.</motion.div>
                     <div className={styles.list}>
-                        <motion.div variants={fadeUp} custom={4} className={styles.item}>After a prescription is signed, Cinnamon reduces <strong>time to prior-authorization submission by nearly 50%</strong> by eliminating back-and-forth between tools. Everything happens on one screen.</motion.div>
-                        <motion.div variants={fadeUp} custom={4} className={styles.item}>Our AI preempts common errors that can cause <strong>up to 30-day delays</strong> and anticipates documentation gaps that block approvals, <strong>improving approval rates by 1 to 2%</strong> across therapies.</motion.div>
+                        <motion.div variants={fadeUp} custom={4} className={styles.item}>After a prescription is signed, Cinnamon reduces <strong>time to prior-authorization submission by nearly 50%</strong> by eliminating back-and-forth between tools. Everything happens on <strong>one screen.</strong></motion.div>
+                        <motion.div variants={fadeUp} custom={4} className={styles.item}>Our AI preempts common errors that can cause <strong>up to 30-day delays</strong> and anticipates documentation gaps that block approvals, improving <strong> approval rates by 1 to 2%</strong> across therapies.</motion.div>
                     </div>
                 </div>
                 <motion.div className={styles.graphic} variants={fadeUp} onViewportEnter={() => {

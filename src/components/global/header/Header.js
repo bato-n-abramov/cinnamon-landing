@@ -20,7 +20,7 @@ export default function Header() {
         // { href: "/#efficiency-scale", label: "What you gain" },
         // { href: "/#compliance", label: "Why it’s safe" },
         // { href: "/#request-demo", label: "How to start" },
-        { href: "/sign-up", label: "Sign up" },
+        { href: "/#request-demo", label: "Request A Demo" },
     ];
 
     const toggleMenu = () => setIsOpen(!isOpen);

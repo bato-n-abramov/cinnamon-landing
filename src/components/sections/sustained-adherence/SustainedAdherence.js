@@ -24,9 +24,9 @@ export default function SustainedAdherence() {
                 <motion.div variants={fadeUp} custom={2} className={styles.list}>
                     <div className={styles.arrow}><Image src={"/arrow-blue.png"} width={400} height={400} alt={"Arrow"} /></div>
                     <motion.div variants={fadeUp} custom={3} className={styles.item}>
-                        Through automated adherence campaigns, our platform sends timely reauthorization notifications, guides re-enrollment and delivers medication reminders that prevent treatment gaps.
+                        Through <strong>automated adherence campaigns</strong>, our platform sends <strong>timely reauthorization notifications</strong>, guides re-enrollment and delivers <strong>medication reminders</strong> that <strong>prevent treatment gaps.</strong>
                     </motion.div>
-                    <motion.div variants={fadeUp} custom={4} className={styles.item}>By aligning health systems, patients, and manufacturers, Cinnamon creates an ecosystem of follow-through that reduces denials, lowers out-of-pocket costs and strengthens long-term adherence.</motion.div>
+                    <motion.div variants={fadeUp} custom={4} className={styles.item}>By aligning health systems, patients, and manufacturers, <strong>Cinnamon creates an ecosystem</strong> of follow-through that <strong>reduces denials, lowers out-of-pocket costs</strong> and <strong>strengthens long-term adherence.</strong></motion.div>
                 </motion.div>
             </div>
         </motion.section>

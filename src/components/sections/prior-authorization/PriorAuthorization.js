@@ -29,13 +29,13 @@ export default function PriorAuthorization() {
                 <div className={styles.content}>
                     <motion.div variants={fadeUp} custom={2} className={styles.list}>
                         <div className={styles.item}>
-                            Our predictive engine keeps pace with evolving payer rules, and smart resubmission workflows accelerate appeals while reducing denials.
+                            Our predictive engine keeps pace with evolving payer rules, and smart resubmission workflows <strong>accelerate appeals while reducing denials.</strong>
                         </div>
                         <div className={styles.arrow}>
                             <Image src={"/arrow-blue.png"} width={400} height={400} alt={"Arrow"} />
                         </div>
                         <div className={styles.item}>
-                            Each submission is automatically validated against plan-specific criteria and pre-populated with the right clinical and insurance details, turning hours of manual entry into minutes.
+                            Each submission is automatically validated against plan-specific criteria and pre-populated with the right clinical and insurance details, <strong>turning hours of manual entry into minutes.</strong>
                         </div>
                     </motion.div>
                     <motion.div variants={fadeUp} custom={3} className={styles.image}>
@@ -52,7 +52,7 @@ export default function PriorAuthorization() {
                             <Image src={"/arrow-blue.png"} width={400} height={400} alt={"Arrow"} />
                         </div>
                         <div className={styles.item}>
-                            Approvals come faster, accuracy stays high, and staff stay focused on your patients instead of paperwork.
+                            <strong>Approvals come faster</strong>, accuracy <strong>stays high</strong>, and staff <strong>stay focused on your patients</strong> instead of paperwork.
                         </div>
                     </motion.div>
                 </div>

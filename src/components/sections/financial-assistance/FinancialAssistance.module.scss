@@ -59,6 +59,7 @@
 
     @media (max-width: 575px) {
         padding: 16px;
+        margin-top: 50px;
     }
 }
 
@@ -70,6 +71,7 @@
     box-shadow: 0 4px 25px 0 rgba(82, 82, 82, 0.08);
     backdrop-filter: blur(10px);
     text-align: center;
+    color: var(--color-dark-green);
 
     p {
         margin-bottom: 10px;
@@ -80,7 +82,6 @@
     }
 
     strong {
-        color: var(--color-orange);
         font-weight: 600;
     }
 }
@@ -115,6 +116,7 @@
 }
 
 .subtext {
+    font-size: var(--font-body-2);
     color: var(--color-dark-green);
     margin-top: 10px;
     text-align: center;

@@ -5,6 +5,7 @@
     background-size: cover;
     background-position: center;
     border-radius: 10px;
+    margin-bottom: 30px;
     
     @media (max-width: 768px) {
         padding: 70px 0;
@@ -23,12 +24,22 @@
     text-transform: capitalize;
     color: var(--color-deep-teal);
     margin-bottom: 20px;
+
+    strong {
+        font-weight: 600;
+        color: var(--color-amber-glow);
+    }
 }
 
 .text {
     text-align: center;
     max-width: 700px;
     margin: 0 auto;
+    color: var(--color-dark-green);
+
+    strong {
+        font-weight: 600;
+    }
 }
 
 .formCard {

@@ -14,7 +14,7 @@
   margin-bottom: 15px;
 
   @media (max-width: 768px) {
-    padding: 210px 0 135px;
+    padding: 190px 0 95px;
     border-radius: 16px;
     background-image: url("/hero_mob.png");
   }
@@ -47,19 +47,24 @@
 
 .text {
     max-width: 620px;
-    margin: 0 auto 45px;
+    margin: 0 auto 65px;
     font-size: var(--font-body-1);
     color: var(--color-dark-green);
     font-weight: 400;
 
     strong {
-      color: var(--color-deep-teal);
+      color: var(--color-orange);
       font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      margin: 0 auto 70px;
     }
 }
 
 .cta {
   margin: 0 auto;
+  text-transform: capitalize;
 }
 
 .suptext {

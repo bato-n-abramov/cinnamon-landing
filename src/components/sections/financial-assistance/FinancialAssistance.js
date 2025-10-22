@@ -19,11 +19,11 @@ export default function FinancialAssistance() {
         <motion.section id="financial-assistance" initial="hidden"
             whileInView="visible" viewport={{ once: true, amount: 0.1 }} className={styles.section}>
             <div className={`${styles.inner} container`}>
-                <motion.h2 variants={fadeUp} custom={0} className={styles.title}>Financial Assistance,<br />
-                    <strong> Built Into Care</strong></motion.h2>
+                <motion.h2 variants={fadeUp} custom={0} className={styles.title}><strong>Financial Assistance,</strong><br />
+                    Built Into Care</motion.h2>
                 <motion.div variants={fadeUp} custom={1} className={styles.text}>
                     <p>Cinnamon makes affordability part of the clinical workflow.</p>
-                    <p>The platform connects charity care, nonprofit foundations, manufacturer copay programs, and Patient Assistance Programs into one compliant, automated process so no patient is left behind because of cost.</p>
+                    <p>Our platform connects charity care, nonprofit foundations, manufacturer copay programs, and Patient Assistance Programs into one compliant, automated process so no patient is left behind because of cost.</p>
                 </motion.div>
                 <motion.div variants={fadeUp} custom={2} className={styles.list}>
                     <motion.div variants={fadeUp} custom={3} className={styles.item}>
@@ -31,7 +31,7 @@ export default function FinancialAssistance() {
                         <p>Funds open and close quickly, but Cinnamon keeps pace, matching patients to available support in real time and prompting teams when new opportunities appear.</p>
                     </motion.div>
                     <motion.div variants={fadeUp} custom={4} className={styles.item}>
-                        <p>Our coverage waterfall checks every layer of assistance including <strong>Medicaid, Medicare subsidies, state/national foundation grants, manufacturer copay,
+                        <p>Our <strong>Coverage Waterfall</strong> checks every layer of assistance including <strong>Medicaid, Medicare subsidies, state/national foundation grants, manufacturer copay,
                             PAPs, and charity care/340B.</strong></p>
                     </motion.div>
                     <motion.div variants={fadeUp} custom={4} className={styles.item}>

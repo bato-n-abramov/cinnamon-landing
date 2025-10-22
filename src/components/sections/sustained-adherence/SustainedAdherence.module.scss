@@ -77,4 +77,8 @@
     box-shadow: 0 4px 25px 0 rgba(82, 82, 82, 0.08);
     backdrop-filter: blur(10px);
     text-align: center;
+
+    strong {
+        font-weight: 600;
+    }
 }
