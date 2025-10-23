@@ -19,7 +19,7 @@ export default function SustainedAdherence() {
         <motion.section id="sustained-adherence" initial="hidden"
             whileInView="visible" viewport={{ once: true, amount: 0.1 }} className={styles.section}>
             <div className={`${styles.inner} container`}>
-                <motion.h2 variants={fadeUp} custom={0} className={styles.title}>Adherence Sustained <strong>Through Connection</strong></motion.h2>
+                <motion.h2 variants={fadeUp} custom={0} className={styles.title}>Adherence Sustained <strong>Through Connection.</strong></motion.h2>
                 <motion.div variants={fadeUp} custom={1} className={styles.text}>Cinnamon keeps patients on therapy long after the first approval.</motion.div>
                 <motion.div variants={fadeUp} custom={2} className={styles.list}>
                     <div className={styles.arrow}><Image src={"/arrow-blue.png"} width={400} height={400} alt={"Arrow"} /></div>

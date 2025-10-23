@@ -78,7 +78,7 @@ export default function RequestDemo() {
             viewport={{ once: true, amount: 0.1 }}
             id="request-demo" className={styles.section}>
             <div className={`${styles.inner} container`}>
-                <motion.h2 variants={fadeUp} custom={0} className={styles.title}>Bring <strong>Efficiency</strong> <br /> to Every Patient Journey</motion.h2>
+                <motion.h2 variants={fadeUp} custom={0} className={styles.title}>Bring <strong>Efficiency</strong> <br /> to Every Patient Journey.</motion.h2>
                 <motion.div variants={fadeUp} custom={1} className={styles.text}>
                     Be part of the <strong>network of clinics and health systems nationwide</strong> transforming
                     how patients <strong>start and stay on therapy with Cinnamon</strong> today.
