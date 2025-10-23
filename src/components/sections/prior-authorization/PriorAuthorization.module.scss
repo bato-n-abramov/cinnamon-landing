@@ -64,15 +64,16 @@
 
     @media (max-width: 768px) {
         position: static;
-        height: 340px;
         display: flex;
+        width: 200%;
+        margin: 0 -50%;
     }
     
-    .lottie {
-        @media (max-width: 575px) {
-            scale: 3;
-        }
-    }
+    // .lottie {
+    //     @media (max-width: 575px) {
+    //         scale: 3;
+    //     }
+    // }
 }
 
 .list {
