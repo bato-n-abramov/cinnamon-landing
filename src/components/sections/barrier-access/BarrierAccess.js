@@ -1,12 +1,24 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
 import Image from "next/image";
 import Lottie from "lottie-react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import styles from "./BarrierAccess.module.scss";
-import desktopAnim from "@/lottie/desktop.json";
-import mobileAnim from "@/lottie/mobile.json";
+
+function useMediaQuery(query) {
+    const [matches, setMatches] = useState(false);
+    useEffect(() => {
+        if (typeof window === "undefined" || !window.matchMedia) return;
+        const mql = window.matchMedia(query);
+        const onChange = () => setMatches(mql.matches);
+        onChange();
+        mql.addEventListener("change", onChange);
+        return () => mql.removeEventListener("change", onChange);
+    }, [query]);
+    return matches;
+}
 
 
 export default function BarrierAccess() {
@@ -20,8 +32,48 @@ export default function BarrierAccess() {
         }),
     };
 
-    const desktopRef = useRef(null);
-    const mobileRef = useRef(null);
+    const isMobile = useMediaQuery("(max-width: 767px)");
+    const prefersReducedMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
+    const lottieRef = useRef(null);
+
+    const graphicRef = useRef(null);
+    const inView = useInView(graphicRef, { amount: 0.2, margin: "0px", once: false });
+
+    const [animData, setAnimData] = useState(null);
+
+    useEffect(() => {
+        let alive = true;
+        (async () => {
+            const mod = await (isMobile
+                ? import("@/lottie/mobile.json")
+                : import("@/lottie/desktop.json"));
+            if (alive) setAnimData(mod.default);
+        })();
+        return () => {
+            alive = false;
+        };
+    }, [isMobile]);
+
+
+
+    const play = () => {
+        const anim = lottieRef.current;
+        if (!anim) return;
+        try {
+            anim.stop?.();
+            anim.goToAndStop?.(0, true);
+        } catch (e) { }
+        anim.setSpeed(prefersReducedMotion ? 1 : 2);
+        anim.goToAndPlay(0, true);
+    };
+
+    useEffect(() => {
+        if (inView && animData) play();
+    }, [inView, animData, prefersReducedMotion]);
+
+    useEffect(() => {
+        if (inView && animData) play();
+    }, [isMobile]);
 
     return (
         <motion.section id="barrier-access"
@@ -44,29 +96,20 @@ export default function BarrierAccess() {
                         <motion.div variants={fadeUp} custom={4} className={styles.item}>Our AI preempts common errors that can cause <strong>up to 30-day delays</strong> and anticipates documentation gaps that block approvals, improving <strong> approval rates by 1 to 2%</strong> across therapies.</motion.div>
                     </div>
                 </div>
-                <motion.div className={styles.graphic} variants={fadeUp} onViewportEnter={() => {
-                    desktopRef.current?.setSpeed(2);
-                    desktopRef.current?.goToAndPlay(0);
-                    mobileRef.current?.setSpeed(2);
-                    mobileRef.current?.goToAndPlay(0);
-                }}>
-                    <Lottie
-                        lottieRef={desktopRef}
-                        animationData={desktopAnim}
-                        autoplay={false}
-                        loop={false}
-
-                        className={`${styles.lottie} ${styles.desktop}`}
-                    />
-
-                    <Lottie
-                        lottieRef={mobileRef}
-                        animationData={mobileAnim}
-                        autoplay={false}
-                        loop={false}
-                        className={`${styles.lottie} ${styles.mobile}`}
-                    />
-                    <div className={styles.graphicItem}>No switching between tools. No duplicate data entry.</div>
+                <motion.div className={styles.graphic} ref={graphicRef}
+                    variants={fadeUp}>
+                    {animData && (
+                        <Lottie
+                            lottieRef={lottieRef}
+                            animationData={animData}
+                            autoplay={false}
+                            loop={false}
+                            className={styles.lottie}
+                        />
+                    )}
+                    <div className={styles.graphicItem}>
+                        No switching between tools. No duplicate data entry.
+                    </div>
                 </motion.div>
                 <div className={`${styles.inner} container`}>
                     <motion.h3 variants={fadeUp} custom={7} className={`${styles.title} ${styles.bold}`}>From independent clinics to multi-hospital networks, <strong>efficiency scales with Cinnamon</strong></motion.h3>

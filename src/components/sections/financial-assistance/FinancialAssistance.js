@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import styles from "./FinancialAssistance.module.scss";
-import desktopAnim from "@/lottie/desktop3.json";
+import desktopAnim from "@/lottie/test.json";
 
 export default function FinancialAssistance() {
 
@@ -46,7 +46,8 @@ export default function FinancialAssistance() {
             </div>
             <motion.div variants={fadeUp} className={styles.image} onViewportEnter={() => {
                 desktopRef.current?.setSpeed(1);
-                desktopRef.current?.playSegments([0, 299], true);
+                // desktopRef.current?.playSegments([0, 299], true);
+                desktopRef.current?.goToAndPlay(0);
             }}
                 viewport={{
                     once: true,
