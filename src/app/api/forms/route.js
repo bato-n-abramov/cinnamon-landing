@@ -13,7 +13,7 @@ const json = (data, init = {}) =>
 
 const FORMS = {
     "request-demo": {
-        required: ["firstName", "lastName", "email", "phone", "org", "title", "specialty", "ehr"],
+        required: ["firstName", "lastName", "email", "phone", "org", "title", "specialty"],
         subject: (p) => `Request a Demo: ${[p.firstName, p.lastName].filter(Boolean).join(" ") || "No name"}`,
         to: process.env.CONTACT_TO,
     },

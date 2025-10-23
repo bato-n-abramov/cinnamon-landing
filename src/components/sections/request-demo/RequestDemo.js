@@ -58,6 +58,8 @@ export default function RequestDemo() {
                     payload: values,
                 }),
             });
+            console.log(res);
+
             if (!res.ok) throw new Error("Request failed", res);
             setStatus("ok");
             resetForm();

@@ -113,8 +113,10 @@ h4 {
   font-weight: 400;
   transition: var(--transition);
 
-  &:hover {
-    background-color: #022B2D;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: #022B2D;
+    }
   }
 }
 
@@ -154,18 +156,19 @@ h4 {
     }
   }
 
-  &:hover {
-    background-color: #022B2D;
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+        background-color: #022B2D;
 
-    .arrow-hidden {
-      transform: translateX(0);
+        .arrow-hidden {
+          transform: translateX(0);
+        }
+
+        .arrow-move {
+          transform: translateX(200%);
+        }
+      }
     }
-
-    .arrow-move {
-      transform: translateX(200%);
-    }
-
-  }
 }
 
 main {
