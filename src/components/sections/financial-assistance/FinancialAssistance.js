@@ -46,7 +46,7 @@ export default function FinancialAssistance() {
             </div>
             <motion.div variants={fadeUp} className={styles.image} onViewportEnter={() => {
                 desktopRef.current?.setSpeed(1);
-                desktopRef.current?.goToAndPlay(0);
+                desktopRef.current?.playSegments([0, 299], true);
             }}
                 viewport={{
                     once: true,
