@@ -1,18 +1,9 @@
 :root {
-  --font-montserrat: 'Montserrat', sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
   --color-dark-green: #162929;
   --color-deep-teal: #00696E;
-  --color-teal: #08858F;
-  --color-soft-aqua: #0097A7;
-  --color-light-aqua: #2AB9B2;
-  --color-light: #D6EFEF;
   --color-light-grey: #F6F8F7;
-  --color-deep-cinnamon: #D1681E;
-  --color-vivid-tangerine: #FE8D44;
   --color-amber-glow: #E69138;
-  --color-golden-apricot: #FFAB40;
-  --color-soft-honey: #FCC670;
-  --color-warm-ivory: #FEF7EA;
   --color-white: #FFF;
   --color-black: #000;
   --color-orange: #D1681E;
@@ -315,8 +306,13 @@ textarea.filled {
   border-radius: 16px;
   overflow: hidden;
   background: #f4f5f6;
+  width: 100%;
   max-width: 500px;
   aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  border: 2px solid var(--color-white);
+  box-shadow: 0 4px 25px 0 rgba(82, 82, 82, 0.08);
+  backdrop-filter: blur(12.5px);
 
   .plyr {
     --plyr-color-main: #00696e;

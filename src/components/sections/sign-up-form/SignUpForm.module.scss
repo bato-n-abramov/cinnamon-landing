@@ -3,13 +3,14 @@
     padding: 40px;
 
     @media (max-width: 768px) {
-        padding: 20px 0;
+        padding: 10px 15px;
         max-width: 100%;
     }
 }
 
 .buttonSubmit {
     align-self: flex-start;
+    margin-top: 20px;
 }
 
 .err {

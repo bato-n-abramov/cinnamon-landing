@@ -9,10 +9,16 @@ import "plyr-react/plyr.css";
 
 export default function VideoPlayer({ src, poster }) {
 
+
     const videoSrc = {
         type: "video",
         poster,
-        sources: [{ src, type: "video/mp4" }],
+        sources: [
+            {
+                src,
+                provider: "youtube",
+            },
+        ],
     };
 
     return (

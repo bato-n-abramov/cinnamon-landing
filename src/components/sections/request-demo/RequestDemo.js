@@ -34,7 +34,6 @@ const Schema = Yup.object({
     org: Yup.string().required("Organisation is required"),
     title: Yup.string().required("Title is required"),
     specialty: Yup.string().required("This field is required"),
-    ehr: Yup.string().required("This field is required"),
 });
 
 export default function RequestDemo() {
@@ -220,16 +219,14 @@ export default function RequestDemo() {
                                 </div>
                                 <div className="row">
                                     <div className="col">
-                                        <label>EHR Used*</label>
+                                        <label>EHR</label>
                                         <CustomSelect
                                             name="ehr"
                                             options={ehrs.map((e) => ({ label: e, value: e }))}
                                             value={values.ehr}
                                             onChange={(val) => setFieldValue("ehr", val)}
                                             placeholder="Choose your EHR Used"
-                                            error={touched.ehr && errors.ehr}
                                         />
-                                        <ErrorMessage name="ehr" component="span" className={styles.err} />
                                     </div>
                                 </div>
 

@@ -45,7 +45,7 @@ export default function Hero() {
           custom={3}
         >
           <a
-            href={"/#request-demo"}
+            href={"/sign-up"}
             className={`${styles.cta} button-icon`}
           >
             <span className='button-icon-text'>Create free account</span>

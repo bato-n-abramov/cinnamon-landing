@@ -13,7 +13,7 @@ export default function ThankYou() {
                 to get your account set up.
             </p>
             <VideoPlayer
-                src="/demo.mp4"
+                src="https://www.youtube.com/watch?v=xaCIK7kTaww"
                 poster="/new_logo.png"
             />
         </div>

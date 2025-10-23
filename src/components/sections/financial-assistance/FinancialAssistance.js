@@ -70,7 +70,7 @@ export default function FinancialAssistance() {
                     custom={6}
                 >
                     <a
-                        href={"/#request-demo"}
+                        href={"/sign-up"}
                         className={`${styles.cta} button-icon`}
                     >
                         <span className='button-icon-text'>Create Your Free Account</span>

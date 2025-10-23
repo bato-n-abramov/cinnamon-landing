@@ -15,7 +15,7 @@ const Schema = Yup.object({
     org: Yup.string().required("Organisation is required"),
 });
 
-export default function SignUpForm({ onSuccess, cls }) {
+export default function SignUpForm({ cls }) {
     const [submitting, setSubmitting] = useState(false);
     const [status, setStatus] = useState(null);
 
@@ -32,7 +32,6 @@ export default function SignUpForm({ onSuccess, cls }) {
             if (!res.ok) throw new Error(data?.error || "Request failed");
             setStatus("ok");
             resetForm();
-            onSuccess?.();
         } catch (e) {
             console.error(e);
             setStatus("error");
