@@ -82,3 +82,16 @@
         font-weight: 600;
     }
 }
+
+.cta {
+    margin: 75px auto 10px;
+
+    @media (max-width: 768px) {
+        margin: 40px auto 10px;
+    }
+}
+
+.subtext {
+    margin: 0 auto;
+    font-size: var(--font-body-2);
+}

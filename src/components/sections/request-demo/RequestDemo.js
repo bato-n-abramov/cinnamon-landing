@@ -139,7 +139,7 @@ export default function RequestDemo() {
 
                                 <div className="row">
                                     <div className="col">
-                                        <label htmlFor="email">Work email*</label>
+                                        <label htmlFor="email">Work Email*</label>
                                         <Field name="email">
                                             {({ field, form }) => (
                                                 <input
@@ -155,7 +155,7 @@ export default function RequestDemo() {
                                     </div>
 
                                     <div className="col">
-                                        <label htmlFor="phone">Phone number*</label>
+                                        <label htmlFor="phone">Phone Number*</label>
                                         <PhoneInput
                                             id="phone"
                                             name="phone"
@@ -227,7 +227,7 @@ export default function RequestDemo() {
                                             options={ehrs.map((e) => ({ label: e, value: e }))}
                                             value={values.ehr}
                                             onChange={(val) => setFieldValue("ehr", val)}
-                                            placeholder="Choose your EHR Used"
+                                            placeholder="Choose your EHR"
                                         />
                                     </div>
                                 </div>

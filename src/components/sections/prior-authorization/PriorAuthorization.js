@@ -26,15 +26,15 @@ export default function PriorAuthorization() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }} className={styles.section}>
             <div className={`${styles.inner} container`}>
-                <motion.h2 variants={fadeUp} custom={0} className={styles.title}>Prior Authorization, <strong>Transformed by AI</strong></motion.h2>
+                <motion.h2 variants={fadeUp} custom={0} className={styles.title}>Prior Authorization, <strong>Transformed by AI.</strong></motion.h2>
                 <motion.div variants={fadeUp} custom={1} className={styles.text}>
-                    <strong>Cinnamon’s Prior Authorization AI</strong> matches payer requirements with over <strong>98% accuracy</strong>,
+                    <strong>Cinnamon’s Prior Authorization</strong> matches payer requirements with up to <strong>98% accuracy</strong>,
                     ensuring each request is complete, compliant, and ready for instant review.
                 </motion.div>
                 <div className={styles.content}>
                     <motion.div variants={fadeUp} custom={2} className={styles.list}>
                         <div className={styles.item}>
-                            Our predictive engine keeps pace with evolving payer rules, and smart resubmission workflows <strong>accelerate appeals while reducing denials.</strong>
+                            Our predictive engine <strong>keeps pace with evolving payer rules</strong>. Smart resubmission workflows <strong>accelerate appeals while reducing denials</strong>.
                         </div>
                         <div className={styles.arrow}>
                             <Image src={"/arrow-blue2.png"} width={400} height={400} alt={"Arrow"} />
@@ -69,7 +69,7 @@ export default function PriorAuthorization() {
                             <Image src={"/arrow-blue2.png"} width={400} height={400} alt={"Arrow"} />
                         </div>
                         <div className={styles.item}>
-                            <strong>Approvals come faster</strong>, accuracy <strong>stays high</strong>, and staff <strong>stay focused on your patients</strong> instead of paperwork.
+                            Cinnamon will <strong>guide you to the appropriate next step</strong> based on our coverage waterfall algorithm. Staff <strong>stays focused on your patients</strong> instead of paperwork.
                         </div>
                     </motion.div>
                 </div>

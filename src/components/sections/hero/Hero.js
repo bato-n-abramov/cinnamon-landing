@@ -26,13 +26,13 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           custom={0}
-        >One platform. <br /> One partner.<em> Zero cost</em> </motion.h1>
+        >One platform. <br /> One partner.<em> Zero cost.</em> </motion.h1>
         <motion.div
           variants={fadeUp}
           initial="hidden"
           animate="visible"
           custom={1} className={styles.text}>Cinnamon automates <strong>prior authorization</strong>, <strong>patient access</strong>, and <strong>adherence </strong>
-          by connecting directly to your EHR so patients start and stay on therapy faster.</motion.div>
+          by connecting directly to your EHR so patients start and stay on therapy longer.</motion.div>
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -63,7 +63,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={4} className={styles.subtext}>Scalable from clinic to system.</motion.div>
+          custom={4} className={styles.subtext}>Scalable from small clinics to health systems.</motion.div>
       </div>
     </section>
   );
